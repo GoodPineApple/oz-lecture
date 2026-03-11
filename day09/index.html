@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Day09</title>
+    </head>
+    <body>
+        <script>
+            // var, let, const 실습
+            var name = "oz";
+            var name = "oz2";
+            console.log(name);
+
+            // 변수 let
+            let age = 25;
+            // let age = 30;
+            age = 30;
+            console.log(age);
+
+            // 상수
+            const pi = 3.14;
+            // pi = 3.1; // 재할당 안됨
+            console.log(pi);
+
+            // 변수 선언 실습
+            var greeting = "안녕하세요";   // 오래된 방식
+            let username = "홍길동";      // 변경 가능한 변수
+            const maxAttempts = 3;      // 고정된 상수
+
+            console.log(greeting);
+            username = "김영희";          // 재할당
+            console.log(username);      // "김영희"
+            console.log(maxAttempts)    // 3
+            
+            // string 문자열
+            let string1 = "작은따옴표('')가 포함됩니다";
+            let string2 = '큰따옴표("")가 포함됩니다';
+            console.log(string1);
+            console.log(string2);
+
+            // string 문자열 연결
+            let stringA = "문자열" + " 연결";
+            let stringB = string1 + " " + string2;
+            console.log("stringA", stringA);
+            console.log("stringB", stringB);
+            
+        </script>
+    </body>
+</html>
