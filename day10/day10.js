@@ -102,7 +102,15 @@
 // console.log(isOk && isHigher);  // true && false => false
 // console.log(isOk || isHigher);  // true || false => true
 
-// 삼항 연산자
-let score = 90;
-let grade = (score >= 90) ? 'A+' : 'B';
-console.log(grade);
+// // 삼항 연산자
+// let score = 90;
+// let grade = (score >= 90) ? 'A+' : 'B';
+// console.log(grade);
+
+// 조건문
+var num = 10;
+if (num % 2 === 0) {
+    console.log("변수 num에 할당된 숫자는 짝수입니다.");
+} else {
+    console.log("변수 num에 할당된 숫자는 홀수입니다.")
+}
