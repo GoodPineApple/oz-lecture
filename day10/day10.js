@@ -107,10 +107,37 @@
 // let grade = (score >= 90) ? 'A+' : 'B';
 // console.log(grade);
 
-// 조건문
-var num = 10;
-if (num % 2 === 0) {
-    console.log("변수 num에 할당된 숫자는 짝수입니다.");
+// // 조건문
+// var num = 10;
+// if (num % 2 === 0) {
+//     console.log("변수 num에 할당된 숫자는 짝수입니다.");
+// } else {
+//     console.log("변수 num에 할당된 숫자는 홀수입니다.");
+// }
+
+// // switch문
+// let food = "melon";
+// switch(food) {
+//     case "melon":
+//     case "apple":
+//         console.log("fruits");
+//         break;
+//     case "carrot":
+//         console.log("vegetable");
+//         break;
+//     default:
+//         console.log("It's not fruits and vegetables")
+//         break;
+// }
+
+// if문
+var score = 80;
+if (score >= 90 && score <= 100) {
+    console.log("A++학점");
+} else if (score >= 80) {
+    console.log("A학점");
+} else if (score >= 70) {
+    console.log("B학점");
 } else {
-    console.log("변수 num에 할당된 숫자는 홀수입니다.")
+    console.log("학점없음");
 }
