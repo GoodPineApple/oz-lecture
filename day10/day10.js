@@ -130,14 +130,17 @@
 //         break;
 // }
 
-// if문
-var score = 80;
-if (score >= 90 && score <= 100) {
-    console.log("A++학점");
-} else if (score >= 80) {
-    console.log("A학점");
-} else if (score >= 70) {
-    console.log("B학점");
-} else {
-    console.log("학점없음");
-}
+// // if문
+// var score = 80;
+// if (score >= 90 && score <= 100) {
+//     console.log("A++학점");
+// } else if (score >= 80) {
+//     console.log("A학점");
+// } else if (score >= 70) {
+//     console.log("B학점");
+// } else {
+//     console.log("학점없음");
+// }
+
+let input = prompt("점수를 입력하세요.");
+console.log(input);
