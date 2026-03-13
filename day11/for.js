@@ -49,7 +49,7 @@ for (let i = 0; i < 10; i++) {
     console.log(i);         // 이번 반복문 중단, 다음 반복 실행
 }
 console.log('==============');
-// for in 
+// for in (배열)
 arr = ["banana", "apple", "orange", "tomato"];
 for (idx in arr) {
     let fruit = arr[idx];
@@ -62,4 +62,19 @@ for (idx in arr) {
         break;
     }
     console.log("oz!!")
+}
+
+// for in (객체)
+let obj = {
+    name: "철수",
+    age: 20,
+}
+for (let key in obj) {
+    console.log(`key: ${key}`);
+    console.log(`val: ${obj[key]}`)
+}
+
+// for of (배열)
+for (item of arr) {
+    console.log(item);
 }
