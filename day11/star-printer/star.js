@@ -1,5 +1,6 @@
 const STAR = "*";
 const DASH = "=";
+const SPACE = " ";
 const PATTERN = [2, 3, 11, 3];
 const ERROR_MESSAGE = "Invalid input! Enter a number between 1 and 10.";
 
@@ -62,7 +63,7 @@ function printSquare(number) {
 function printPyramid(number) {
   console.log("피라미드");
   for (let i = 0; i < number; i++) {
-    let space = makeSign(number - i - 1, " ");
+    let space = makeSign(number - i - 1, SPACE);
     let sign = makeSign(2 * i + 1, STAR);
     console.log(space + sign);
   }
