@@ -1,3 +1,15 @@
+const wrongJsonString = `{
+    "name": "John",
+    "age": 30,
+}`;
+try {
+  const jsonObj = JSON.parse(wrongJsonString);
+  const { name: objName, age: objAge } = jsonObj;
+  console.log(objName, objAge);
+} catch (error) {
+  console.log("에러:", error);
+}
+
 const jsonString = `{
     "name": "John",
     "age": 30
@@ -32,8 +44,3 @@ const jsonStringArr = `[
 ]`;
 const jsonArray = JSON.parse(jsonStringArr);
 console.log(jsonArray);
-
-const wrongJsonString = `{
-    "name": "John",
-    "age": 30,
-}`;
