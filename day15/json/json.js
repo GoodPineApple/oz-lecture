@@ -32,3 +32,8 @@ const jsonStringArr = `[
 ]`;
 const jsonArray = JSON.parse(jsonStringArr);
 console.log(jsonArray);
+
+const wrongJsonString = `{
+    "name": "John",
+    "age": 30,
+}`;
