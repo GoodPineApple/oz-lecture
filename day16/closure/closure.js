@@ -13,11 +13,27 @@ console.log(globalVar); // 출력
 // 클로저
 const x = 1;
 function outer() {
-  const x = 10;
+  const x = 10; // 상태 state
   const inner = function () {
     console.log(x);
   };
-  return inner;
+  return inner; // hook
 }
 const innerFunction = outer();
 innerFunction(); // 중첩함수
+
+// 클로저 - 카운트 상태 변경 함수
+const increaseFn = () => {
+  let num = 0;
+  return () => {
+    return ++num;
+  };
+};
+const increase = increaseFn();
+const inc1 = increase();
+const inc2 = increase();
+console.log(inc1);
+console.log(inc2);
+console.log(increase());
+console.log(increase());
+console.log(increase());
