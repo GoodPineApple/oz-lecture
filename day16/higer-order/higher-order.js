@@ -33,7 +33,7 @@ const prepareMovies = () => {
   return movies;
 };
 
-const movies = prepareMovies();
+const movies = prepareMovies(); // day12 movie-collection
 console.log(movies);
 
 // title만 뽑아서 확인하고 싶다.
@@ -44,3 +44,33 @@ for (let i = 0; i < movies.length; i++) {
   titles.push(title);
 }
 console.log(titles);
+
+const titlesByMap = movies.map((movie) => {
+  const title = movie.title;
+  return title;
+});
+console.log(titlesByMap);
+
+const titlesByMapShort = movies.map((movie) => movie.title);
+console.log(titlesByMapShort);
+
+// {title, director}만 있는 배열을 확인하고 싶다.
+// for문
+const infoArr = [];
+for (const movie of movies) {
+  infoArr.push({
+    title: movie.title,
+    director: movie.director,
+  });
+}
+for (const movie of movies) {
+  const { title, director } = movie;
+  infoArr.push({
+    title, // title: title
+    director, // director: director
+  });
+}
+for ({ title, director } of movies) {
+  infoArr.push({ title, director });
+}
+console.log(infoArr);
