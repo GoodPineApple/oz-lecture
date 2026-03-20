@@ -109,7 +109,7 @@ const taemMovie = movies.map((movie) => {
 console.log(taemMovie);
 
 // filter
-const numbers = [1, 2, 3, 4, 5];
+let numbers = [1, 2, 3, 4, 5];
 // 짝수 뽑아내기
 // for문
 const evenArr = []; // [2, 4]
@@ -145,3 +145,19 @@ const sumReduce = numbers.reduce((acc, num) => {
   return acc + num;
 }, 0);
 const sumReduceShort = numbers.reduce((acc, num) => acc + num, 0);
+
+///////////////////////////////
+// 함수 조합
+numbers = [1, 2, 3, 4, 5];
+// 짝수만 뽑아서 2를 곱해서 전체 합산하는 로직.
+
+const a = numbers.filter((num) => num % 2 === 0);
+const b = a.map((num) => num * 2);
+const c = b.reduce((acc, num) => acc + num, 0);
+
+const result = numbers
+  .filter((num) => num % 2 === 0)
+  .map((num) => num * 2)
+  .reduce((acc, num) => acc + num, 0);
+
+console.log(result);
