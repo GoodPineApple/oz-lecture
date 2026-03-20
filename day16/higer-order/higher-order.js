@@ -74,3 +74,16 @@ for ({ title, director } of movies) {
   infoArr.push({ title, director });
 }
 console.log(infoArr);
+
+// map
+const infoArrByMap = movies.map((movie) => {
+  return {
+    title: movie.title,
+    director: movie.director,
+  };
+});
+
+const infoArrByMap2 = movies.map(({ title, director }) => {
+  return { title, director };
+});
+console.log(infoArrByMap2);
