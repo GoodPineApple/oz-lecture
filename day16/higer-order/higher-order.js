@@ -37,3 +37,10 @@ const movies = prepareMovies();
 console.log(movies);
 
 // title만 뽑아서 확인하고 싶다.
+const titles = [];
+for (let i = 0; i < movies.length; i++) {
+  const movie = movies[i];
+  const title = movie.title;
+  titles.push(title);
+}
+console.log(titles);
