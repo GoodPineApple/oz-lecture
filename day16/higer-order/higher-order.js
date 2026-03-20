@@ -93,12 +93,13 @@ const newMovies = movies.map((movie) => {
   console.log(movie);
   return {
     ...movie, // genre: movie.genre, title: movie.title, year: movie.year
-    hit: 0,
+    hit: 100,
   };
 });
 console.log(newMovies);
 
 // 모든 Movie의 director 값을 "taem"으로 바꾸고 싶다.
+// 객체내에 중복된 키값이 있으면 뒤에 선언된 키값으로 적용되기 때문에
 const taemMovie = movies.map((movie) => {
   return {
     ...movie, // director: movie.director, title: movie.title, year: movie.year
@@ -106,3 +107,41 @@ const taemMovie = movies.map((movie) => {
   };
 });
 console.log(taemMovie);
+
+// filter
+const numbers = [1, 2, 3, 4, 5];
+// 짝수 뽑아내기
+// for문
+const evenArr = []; // [2, 4]
+for (let i = 0; i < numbers.length; i++) {
+  const num = numbers[i];
+  if (num % 2 == 0) evenArr.push(num);
+}
+
+// filter
+const evenArrFilter = numbers.filter((num) => {
+  return num % 2 === 0;
+});
+
+// 2000년 이후의 영화만 필터링
+const moviesAfter2000 = movies.filter((movie) => {
+  let year = movie.year;
+  if (year >= 2000) return true;
+  else return false;
+});
+console.log(moviesAfter2000);
+const moviesAfter2000Short = movies.filter((movie) => movie.year >= 2000);
+
+// reduce
+
+// foreach (for처럼 배열을 반환하지 않는다. 단순히 돌기만 한다)
+let sum = 0;
+numbers.forEach((num) => {
+  sum += num;
+});
+
+// reduce
+const sumReduce = numbers.reduce((acc, num) => {
+  return acc + num;
+}, 0);
+const sumReduceShort = numbers.reduce((acc, num) => acc + num, 0);
