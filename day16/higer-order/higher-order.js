@@ -87,3 +87,22 @@ const infoArrByMap2 = movies.map(({ title, director }) => {
   return { title, director };
 });
 console.log(infoArrByMap2);
+
+// 모든 movie에 hit:0 속성을 넣어주고 싶다.  // ...rest
+const newMovies = movies.map((movie) => {
+  console.log(movie);
+  return {
+    ...movie, // genre: movie.genre, title: movie.title, year: movie.year
+    hit: 0,
+  };
+});
+console.log(newMovies);
+
+// 모든 Movie의 director 값을 "taem"으로 바꾸고 싶다.
+const taemMovie = movies.map((movie) => {
+  return {
+    ...movie, // director: movie.director, title: movie.title, year: movie.year
+    director: "taem",
+  };
+});
+console.log(taemMovie);
