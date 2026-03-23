@@ -2,10 +2,10 @@ async function fetchMultiple(userId) {
   try {
     const [user, posts] = await Promise.all([
       fetch(`https://jsonplaceholder.typicode.com/users/${userId}`).then(
-        (res) => res.json()
+        (res) => res.json(),
       ),
       fetch(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`).then(
-        (res) => res.json()
+        (res) => res.json(),
       ),
     ]);
     console.log("user", user); // obj

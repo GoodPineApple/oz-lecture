@@ -1,7 +1,7 @@
 async function login(userId) {
   try {
     const response = await fetch(
-      `https://jsonplaceholder.typicode.com/users/${userId}`
+      `https://jsonplaceholder.typicode.com/users/${userId}`,
     );
     const user = await response.json();
     console.log(user);
@@ -10,6 +10,8 @@ async function login(userId) {
     localStorage.setItem("user", JSON.stringify(user)); // 설정
     const storedUser = localStorage.getItem("user"); // 조회
     console.log(storedUser);
+    const storedUserObj = JSON.parse(storedUser);
+    console.log(storedUserObj);
     // localStorage.removeItem("user") // 삭제
   } catch (error) {
     console.log(error);
